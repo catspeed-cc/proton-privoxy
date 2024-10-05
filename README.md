@@ -57,6 +57,28 @@ Test:
 curl --proxy http://127.0.0.1:8888 https://ipinfo.io/ip
 ```
 
+## Scripts
+
+### Setup scripts
+- Copy config.cfg.example to config.cfg ```cp config.cfg.example config.cfg```
+- Edit the config.cfg file to your liking (most defaults are fine, just put your login/pass) ```nano config.cfg```
+
+### proton-privoxy.sh
+Run this script ```./proton-privoxy.sh``` to install or upgrade the proton-privoxy container.
+
+A proxy will be opened on http://172.50.0.272.50.0:8080/
+
+### change-ip.sh
+Run this script ```./chagne-ip.sh``` to restart the docker container and change VPN server
+
+### Test proxy
+```
+# Test current IP
+curl https://ipinfo.io/ip
+
+# Test VPN IP
+curl --proxy http://172.50.0.272.50.0:8080/ https://ipinfo.io/ip
+```
 
 ## Features
 
