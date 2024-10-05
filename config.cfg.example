@@ -1,0 +1,21 @@
+
+# Proton VPN Login
+PVPN_LOGIN="YOUR_PROTON_LOGIN"
+
+# Proton VPN Password
+PVPN_PASS="YOUR_PROTON_PASSWORD"
+
+# Proton VPN CLI args
+PVPN_CMD_ARGS="connect --random"
+
+# DOCKER CONTAINER NAME (can change or leave it)
+DOCKER_CONTAINER_NAME=proton-privoxy
+
+# DOCKER CONTAINER IP (can change or leave it)
+DOCKER_CONTAINER_IP=172.50.0.2
+
+# DOCKER SUBNET (can change or leave it)
+DOCKER_CONTAINER_SUBNET=172.50.0.0/16
+
+# DOCKER NETWORK NAME (can change or leave it)
+DOCKER_NETWORK_NAME=pvpnnet
