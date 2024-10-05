@@ -86,6 +86,8 @@ curl --proxy http://172.50.0.2:8080/ https://ipinfo.io/ip
 crontab won't work unless user has sudo nopasswd:
 ```nano /etc/sudoers``` add your user line under the others ```myusername ALL=(ALL:ALL)NOPASSWD:ALL```
 
+Technically adding nopasswd is not really safe, but I am not sure how else to get around the password prompt within the script. Just be warned the user will have sudo abilities without entering a password!
+
 ## Features
 
 ### Multiple VPN connections on the same machine
