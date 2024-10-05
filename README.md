@@ -73,12 +73,18 @@ Run this script ```./change-ip.sh``` to restart the docker container and change 
 
 ### test proxy
 ```
-# Test current IP
+# test current ip
 curl https://ipinfo.io/ip
 
-# Test VPN IP
+# test vpn ip
 curl --proxy http://172.50.0.2:8080/ https://ipinfo.io/ip
 ```
+
+### crontab update
+```crontab -e```add an entry ```0 0 * * 5 ~/proton-privoxy/proton-privoxy.sh```
+
+crontab won't work unless user has sudo nopasswd:
+```nano /etc/sudoers``` add your user line under the others ```myusername ALL=(ALL:ALL)NOPASSWD:ALL```
 
 ## Features
 
