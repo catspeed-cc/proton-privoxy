@@ -59,7 +59,7 @@ curl --proxy http://127.0.0.1:8888 https://ipinfo.io/ip
 
 ## Scripts
 
-### Setup scripts
+### setup scripts
 - Copy config.cfg.example to config.cfg ```cp config.cfg.example config.cfg```
 - Edit the config.cfg file to your liking (most defaults are fine, just put your login/pass) ```nano config.cfg```
 
@@ -71,7 +71,7 @@ A proxy will be opened on http://172.50.0.2:8080/
 ### change-ip.sh
 Run this script ```./change-ip.sh``` to restart the docker container and change VPN server
 
-### Test proxy
+### test proxy
 ```
 # Test current IP
 curl https://ipinfo.io/ip
