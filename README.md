@@ -66,7 +66,7 @@ curl --proxy http://127.0.0.1:8888 https://ipinfo.io/ip
 ### proton-privoxy.sh
 Run this script ```./proton-privoxy.sh``` to install or upgrade the proton-privoxy container.
 
-A proxy will be opened on http://172.50.0.2:8080/
+A proxy will be opened on http://172.50.0.2:8080/ accessible only from local machine
 
 ### change-ip.sh
 Run this script ```./change-ip.sh``` to restart the docker container and change VPN server
