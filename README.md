@@ -59,7 +59,7 @@ curl --proxy http://127.0.0.1:8888 https://ipinfo.io/ip
 
 ## Scripts
 
-### setup scripts
+### script configuration
 - Copy config.cfg.example to config.cfg ```cp config.cfg.example config.cfg```
 - Edit the config.cfg file to your liking (most defaults are fine, just put your login/pass) ```nano config.cfg```
 
