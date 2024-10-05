@@ -5,19 +5,20 @@ Docker container for setting up a [Privoxy](https://www.privoxy.org/) proxy that
 
 Build Docker image:
 ```
-docker build -t walt3rl/proton-privoxy .
+docker build -t moolehsacat/proton-privoxy .
 ```
 
 Run Docker container:
 
 ```
 docker run -d \
+     --network=host \
      --device=/dev/net/tun --cap-add=NET_ADMIN \
      -v /etc/localtime:/etc/localtime:ro \
      -p 8888:8080 \
      -e PVPN_USERNAME=my_protonvpn_openvpn_username \
      -e PVPN_PASSWORD=my_protonvpn_openvpn_password \
-     --name proton-privoxy walt3rl/proton-privoxy
+     --name proton-privoxy moolehsacat/proton-privoxy
 ```
 
 Or with this `docker-compose.yml`:
