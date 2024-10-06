@@ -72,7 +72,7 @@ git clone https://github.com/mooleshacat/proton-privoxy.git
 ### proton-privoxy.sh
 Run this script ```./proton-privoxy.sh``` to install or upgrade the proton-privoxy container.
 
-A proxy will be opened on http://172.50.0.2:8080/ accessible only from local machine
+A proxy will be opened on http://127.0.0.1:8888 accessible only from local machine
 
 ### change-ip.sh
 Run this script ```./change-ip.sh``` to restart the docker container and change VPN server
@@ -83,7 +83,7 @@ Run this script ```./change-ip.sh``` to restart the docker container and change 
 curl https://ipinfo.io/ip
 
 # test vpn ip
-curl --proxy http://172.50.0.2:8080/ https://ipinfo.io/ip
+curl --proxy http://127.0.0.1:8888/ https://ipinfo.io/ip
 ```
 
 ### crontab update
