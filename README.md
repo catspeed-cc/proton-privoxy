@@ -69,11 +69,6 @@ git clone https://github.com/mooleshacat/proton-privoxy.git
 - Edit the config.cfg file to your liking (most defaults are fine, just put your login/pass) ```nano config.cfg```
 - Run scripts as root (the original code uses docker container which requires root on default installation)
 
-### why root?
-The original code for walterl/proton-privoxy only includes a docker setup / installation. Docker by default on Debian and other linux distributions is set up under the root user and requires root user to issue docker commands.
-
-Furthermore, if you were to install under a user account, in order for the scripts to work they would need sudo with nopasswd which would essentially poke a hole into your system that can be exploited by anyone with access to the user account to gain access to root. Thus it is in my opinion safer to just keep everything under the root user.
-
 ### proton-privoxy.sh
 Run this script ```./proton-privoxy.sh``` to install or upgrade the proton-privoxy container.
 
@@ -93,6 +88,11 @@ curl --proxy http://172.50.0.2:8080/ https://ipinfo.io/ip
 
 ### crontab update
 ```crontab -e``` add an entry ```@monthly /root/proton-privoxy/proton-privoxy.sh``` to update monthly
+
+### why root?
+The original code for walterl/proton-privoxy only includes a docker setup / installation. Docker by default on Debian and other linux distributions is set up under the root user and requires root user to issue docker commands.
+
+Furthermore, if you were to install under a user account, in order for the scripts to work they would need sudo with nopasswd which would essentially poke a hole into your system that can be exploited by anyone with access to the user account to gain access to root. Thus it is in my opinion safer to just keep everything under the root user.
 
 ## Features
 
