@@ -87,7 +87,7 @@ curl --proxy http://172.50.0.2:8080/ https://ipinfo.io/ip
 ```
 
 ### crontab update
-```crontab -e``` add an entry ```@weekly /root/proton-privoxy/proton-privoxy.sh``` to update weekly
+```crontab -e``` add an entry ```@monthly /root/proton-privoxy/proton-privoxy.sh``` to update monthly
 
 ### why root?
 The original code for walterl/proton-privoxy only includes a docker setup / installation. Docker by default on Debian and other linux distributions is set up under the root user and requires root user to issue docker commands.
