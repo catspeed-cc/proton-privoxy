@@ -28,7 +28,7 @@ Or with this `docker-compose.yml`:
 version: "3"
 services:
   proton-privoxy:
-    image: walt3rl/proton-privoxy
+    image: moolehsacat/proton-privoxy
     container_name: proton-privoxy
     environment:
       - PVPN_USERNAME=xxxxxxxxxxxxxxxxxxxxxxxx
@@ -60,8 +60,10 @@ curl --proxy http://127.0.0.1:8888 https://ipinfo.io/ip
 ## Scripts
 
 ### script configuration
+- Clone this repository somewhere in root account
 - Copy config.cfg.example to config.cfg ```cp config.cfg.example config.cfg```
 - Edit the config.cfg file to your liking (most defaults are fine, just put your login/pass) ```nano config.cfg```
+- Run scripts as root (the original code uses docker container which requires root on default installation)
 
 ### proton-privoxy.sh
 Run this script ```./proton-privoxy.sh``` to install or upgrade the proton-privoxy container.
@@ -83,8 +85,8 @@ curl --proxy http://172.50.0.2:8080/ https://ipinfo.io/ip
 ### crontab update
 ```crontab -e``` add an entry ```0 0 * * 5 ~/proton-privoxy/proton-privoxy.sh``` to update every Friday
 
-crontab won't work unless user has sudo nopasswd:
-```nano /etc/sudoers``` add your user line under the others ```myusername ALL=(ALL:ALL)NOPASSWD:ALL```
+-crontab won't work unless user has sudo nopasswd:-
+-```nano /etc/sudoers``` add your user line under the others ```myusername ALL=(ALL:ALL)NOPASSWD:ALL```-
 
 Technically adding nopasswd is not really safe, but I am not sure how else to get around the password prompt within the script. Just be warned the user will have sudo abilities without entering a password! (ex. ```sudo su``` entered as this user will get you root user access)
 
