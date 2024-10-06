@@ -96,7 +96,8 @@ curl --proxy http://172.50.0.2:8080/ https://ipinfo.io/ip
 
 ### why root?
 The original code for walterl/proton-privoxy only includes a docker setup / installation.
-Docker by default on Debian and other linux distributions is set up under the root user and requires root user to issue docker commands. 
+Docker by default on Debian and other linux distributions is set up under the root user and requires root user to issue docker commands.
+Docker is typically used in development or personal useage setups, and considered by some to be improper for a production setup.
 
 ## Features
 
