@@ -94,6 +94,10 @@ curl --proxy http://172.50.0.2:8080/ https://ipinfo.io/ip
 
 ~Technically adding nopasswd is not really safe, but I am not sure how else to get around the password prompt within the script. Just be warned the user will have sudo abilities without entering a password! (ex. ```sudo su``` entered as this user will get you root user access)~
 
+### why root?
+The original code for walterl/proton-privoxy only includes a docker setup / installation.
+Docker by default on Debian and other linux distributions is set up under the root user and requires root user to issue docker commands. 
+
 ## Features
 
 ### Multiple VPN connections on the same machine
