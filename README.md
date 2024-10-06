@@ -60,7 +60,11 @@ curl --proxy http://127.0.0.1:8888 https://ipinfo.io/ip
 ## Scripts
 
 ### script configuration
-- Clone this repository somewhere in root account Ex. ```/root/proton-privoxy```
+- Clone this repository somewhere in root account
+```
+cd /root
+git clone https://github.com/mooleshacat/proton-privoxy.git
+```
 - Copy config.cfg.example to config.cfg ```cp config.cfg.example config.cfg```
 - Edit the config.cfg file to your liking (most defaults are fine, just put your login/pass) ```nano config.cfg```
 - Run scripts as root (the original code uses docker container which requires root on default installation)
