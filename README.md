@@ -1,3 +1,10 @@
+# REPOSITORY MOVED
+Please note the repository has been moved from mooleshacat/proton-privoxy to catspeed-cc/proton-privoxy.
+
+You can update your local clone with ```git remote set-url origin https://github.com/catspeed-cc/proton-privoxy```
+
+<br />
+
 # ProtonVPN Privoxy Docker
 
 Docker container for setting up a [Privoxy](https://www.privoxy.org/) proxy that pushes traffic over a
