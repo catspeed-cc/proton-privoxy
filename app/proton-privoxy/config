@@ -4,3 +4,6 @@ listen-address  0.0.0.0:8080
 
 #debug   1    # show each GET/POST/CONNECT request
 debug   4096 # Startup banner and warnings
+
+# set max connections higher
+max-client-connections 102400
