@@ -32,7 +32,7 @@ sudo docker network create --subnet=${DOCKER_CONTAINER_SUBNET} ${DOCKER_NETWORK_
 
 echo ""
 echo "Running docker image, please wait..."
-CONTAINER_ID=$(sudo docker run -d --net ${DOCKER_NETWORK_NAME} --ip ${DOCKER_CONTAINER_IP} --restart unless-stopped --device=/dev/net/tun --cap-add=NET_ADMIN -v /etc/localtime:/etc/localtime:ro -p 8888:8080 -e PVPN_USERNAME=${PVPN_LOGIN} -e PVPN_PASSWORD=${PVPN_PASS} -e PVPN_CMD_ARGS="${PVPN_CMD_ARGS}" --name ${DOCKER_CONTAINER_NAME} moolehsacat/proton-privoxy)
+CONTAINER_ID=$(sudo docker run -d --net ${DOCKER_NETWORK_NAME} --ip ${DOCKER_CONTAINER_IP} --restart unless-stopped --device=/dev/net/tun --cap-add=NET_ADMIN -v /etc/localtime:/etc/localtime:ro -p ${LOCALHOST_PORT}:8080 -e PVPN_USERNAME=${PVPN_LOGIN} -e PVPN_PASSWORD=${PVPN_PASS} -e PVPN_CMD_ARGS="${PVPN_CMD_ARGS}" --name ${DOCKER_CONTAINER_NAME} moolehsacat/proton-privoxy)
 echo "Container ID: '${CONTAINER_ID}'"
 
 sleep 15
