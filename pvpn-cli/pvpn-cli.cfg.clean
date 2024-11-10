@@ -4,7 +4,7 @@ tier = PVPN_TIER
 default_protocol = PVPN_PROTOCOL
 initialized = 1
 dns_leak_protection = 1
-custom_dns = None
+custom_dns = 8.8.8.8
 check_update_interval = 3
 killswitch = 0
 
